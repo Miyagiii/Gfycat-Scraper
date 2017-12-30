@@ -10,9 +10,9 @@ import urllib
 import random
 from bs4 import BeautifulSoup as soup
 
-def searchResults(term, it = "def"): # Searches gogoanime for the name of the anime
+def searchResults(term, it = "def"): # Searches gfycat for the name of the anime
     term = quote_plus(term)
-    url = "https://gfycat.com/gifs/search/"+term# Looks for the anime by a given name
+    url = "https://gfycat.com/gifs/search/"+term# Looks for the gif by a given name
 
     request = Request(url, headers={'User-Agent': 'Mozilla/5.0'}) # Requests the page using a false header because scraping 403's
     client = urlopen(request) # Opens a connection to the page
